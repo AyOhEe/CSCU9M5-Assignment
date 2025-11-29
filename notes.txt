@@ -1,0 +1,2 @@
+This .txt file contains the rough contents for each section, before I made the poster.
+I prefer writing my thoughts in text, but writing them in a file lets me keep this in version control.
