@@ -1,2 +1,40 @@
 This .txt file contains the rough contents for each section, before I made the poster.
 I prefer writing my thoughts in text, but writing them in a file lets me keep this in version control.
+
+Section 1:
+3423815
+
+Section 2:
+[TODO progressively outline]
+
+Section 3:
+- X: Discrete Feature - Used
+- Y: Discrete Feature - Used
+- Month: Categorical Feature - Used
+- Day: Categorical Feature - Unused
+- FFMC: Continuous Feature - Used
+- DMC: Continuous Feature - Used
+- DC: Continuous Feature - Used
+- ISI: Continuous Feature - Used
+- Temp: Continuous Feature - Used
+- RH: Continuous Feature - Used
+- Wind: Continuous Feature - Used
+- Rain: Continuous Feature - Used
+- Area: Categorical Target - Required.
+TODO [explain consequence]
+ - Something about assuming that the main correlation to be found in position will be identifying
+   particularly well-burning "hot spots" for wildfires, and as such one-hot encoding will make more
+   sense than continuous as the correlation is assumed to not be linear w.r.t. X or Y, but a
+   combination involving both coordinates.
+ - That isn't really a consequence. Think of something else?
+
+
+Section 4:
+
+Section 5:
+
+Section 6:
+
+Section 7:
+
+Section 8:
