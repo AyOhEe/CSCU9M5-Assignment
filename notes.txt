@@ -11,7 +11,7 @@ Section 3:
 - X: Discrete Feature - Used
 - Y: Discrete Feature - Used
 - Month: Categorical Feature - Used
-- Day: Categorical Feature - Unused
+- Day: Categorical Feature - Used
 - FFMC: Continuous Feature - Used
 - DMC: Continuous Feature - Used
 - DC: Continuous Feature - Used
@@ -19,7 +19,7 @@ Section 3:
 - Temp: Continuous Feature - Used
 - RH: Continuous Feature - Used
 - Wind: Continuous Feature - Used
-- Rain: Continuous Feature - Used
+- Rain: Continuous Feature - Unused (due to histogram)
 - Area: Categorical Target - Required.
 TODO [explain consequence]
  - Something about assuming that the main correlation to be found in position will be identifying
@@ -30,6 +30,8 @@ TODO [explain consequence]
 
 
 Section 4:
+The "rain" variable has a large majority value at 0, comprising almost all datapoints.
+As such, this variable was not considered.
 
 Section 5:
 
