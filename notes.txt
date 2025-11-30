@@ -42,9 +42,32 @@ As such, this variable was not considered.
 
 Section 5:
 Model types used: Neural Network, Random forest, Support Vector Machine
+[TODO hyperparameter experimentation table]
+[TODO hyperparameter choice sentence]
+[TODO final model choice]
+[TODO training report on final choice]
 
 Section 6:
+Final model chosen: [TODO fill]
+Justification: [TODO fill]
+Confusion matrix on validation dataset: [TODO fill]
+        Predicted
+        F          T
+A
+c  F
+t
+u
+a  T
+l
+
+Comment: [TODO write]
+
 
 Section 7:
+[TODO insight]
+[TODO model features?]
+[TODO bias?]
+[TODO useful?]
 
 Section 8:
+[TODO convert to IEEE] Canvas materials by Sandy Brownlee
