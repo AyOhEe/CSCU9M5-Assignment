@@ -6,12 +6,19 @@ Section 1:
 
 Section 2:
 [TODO progressively outline]
+Test/train/validate: 65/17.5/17.5
+This was done to ensure sufficient test and validation data at the end of training, as
+the dataset is rather small at only 517 entries.
+
+Performed histogram analysis and removed "rain" variable.
+Configured orange workflow to train and test the three selected model types on the train 
+and test datasets, and to display results on both the test and validation datasets.
 
 Section 3:
 - X: Discrete Feature - Used
 - Y: Discrete Feature - Used
 - Month: Categorical Feature - Used
-- Day: Categorical Feature - Used
+- Day: Categorical Feature - Unused
 - FFMC: Continuous Feature - Used
 - DMC: Continuous Feature - Used
 - DC: Continuous Feature - Used
@@ -34,6 +41,7 @@ The "rain" variable has a large majority value at 0, comprising almost all datap
 As such, this variable was not considered.
 
 Section 5:
+Model types used: Neural Network, Random forest, Support Vector Machine
 
 Section 6:
 
