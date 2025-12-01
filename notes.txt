@@ -14,6 +14,9 @@ Performed histogram analysis and removed "rain" variable.
 Configured orange workflow to train and test the three selected model types on the train 
 and test datasets, and to display results on both the test and validation datasets.
 
+Experimented with variations of hyperparameters for all three chosen model types,
+eventually settling on [TODO model] with [TODO hyperparameters]
+
 Section 3:
 - X: Discrete Feature - Used
 - Y: Discrete Feature - Used
@@ -42,10 +45,55 @@ As such, this variable was not considered.
 
 Section 5:
 Model types used: Neural Network, Random forest, Support Vector Machine
-[TODO hyperparameter experimentation table]
-[TODO hyperparameter choice sentence]
-[TODO final model choice]
-[TODO training report on final choice]
+All models were evaluated with 5-fold cross validation
+
+Neural network hyperparameter experiments:
+- CA = 0.733 @ [100,] with 500 iterations
+- CA = 0.786 @ [100,100] with 500 iterations
+- CA = 0.816 @ [100,100] with 1000 iterations
+- CA = 0.843 @ [200, 100] with 1000 iterations
+- CA = 0.807 @ [200, 100, 50] with 1000 iterations
+- CA = 0.804 @ [200, 100, 50] with 2000 iterations
+- CA = 0.816 @ [200, 100] with 2000 iterations
+- CA = 0.763 @ [200, 200] with 1000 iterations
+- CA = 0.780 @ [300, 100] with 1000 iterations
+- CA = 0.777 @ [300, 100] with 2000 iterations
+- CA = 0.772 @ [300, 200] with 3000 iterations
+- CA = 0.825 @ [200, 100] with 1500 iterations
+
+Best performing parameters: [200, 100] with 1000 iterations, for CA = 0.843
+
+
+Random forest hyperparameter experiments:
+- CA = 0.831 @ n=10, threshold=5
+- CA = 0.846 @ n=20, threshold=5
+- CA = 0.843 @ n=30, threshold=5
+- CA = 0.858 @ n=25, threshold=5
+- CA = 0.813 @ n=5, threshold=5
+- CA = 0.834 @ n=25, threshold=8
+- CA = 0.843 @ n=25, threshold=3
+
+Best performing parameters: n=26, threshold=5, for CA = 0.858
+
+
+SVM hyperparameter experiments:
+- CA = 0.754 @ C=1.00, e=0.1, iterations=100
+- CA = 0.751 @ C=1.00, e=0.1, iterations=200
+- CA = 0.774 @ C=2.00, e=0.1, iterations=200
+- CA = 0.766 @ C=2.00, e=0.1, iterations=100
+- CA = 0.766 @ C=4.00, e=0.1, iterations=200
+-----Switched to RBF-----
+- CA = 0.804 @ C=2.00, e=0.1, iterations=200, g=auto, c=1.0, d=4
+- CA = 0.804 @ C=2.00, e=0.1, iterations=300, g=auto, c=1.0, d=4
+- CA = 0.813 @ C=2.00, e=0.1, iterations=300, g=auto, c=1.0, d=5
+- CA = 0.783 @ C=2.00, e=0.1, iterations=300, g=auto, c=1.5, d=5
+- CA = 0.769 @ C=2.00, e=0.1, iterations=300, g=auto, c=2.0, d=5
+
+Best performing parameters: C=2.00, e=0.1, iterations=300, g=auto, c=1.0, d=5, for CA = 0.813
+
+
+The best model seems to be Random Forest, with a CA of 0.858 with n=25, threshold=5
+
 
 Section 6:
 Final model chosen: [TODO fill]
