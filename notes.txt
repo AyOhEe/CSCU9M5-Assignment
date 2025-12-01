@@ -134,7 +134,7 @@ significantly worse (up to 4.8%pt. worse) when it did not have access to this in
 temperature seems to be an important feature, as the model performed 3.0%pt worse when lacking the temperature information.
 
 The model is clearly biased towards predicting "T", reflecting the larger amount of "T" entries in the dataset.
-The nature of a random forest model is that it conglomerates the prediction of multiple decision trees. This makes it difficult towards
+The nature of a random forest model is that it conglomerates the prediction of multiple decision trees. This makes it difficult to
 fully grasp the decision-making process that occurs inside the model. While it is theoretically possible to reason through each tree and
 determine why it may have come to a given decision, to most people (especially those outside of mathematics or computing science), it
 is functionally a "black box".
