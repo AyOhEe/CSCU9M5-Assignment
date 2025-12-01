@@ -131,7 +131,7 @@ By removing individual features, we can get a picture of which features are most
 - Without Wind:                 CA = 0.846
 This suggests that the month, duff moisture code (DMC), and the drought code (DC) are particularly important features, as the model performed
 significantly worse (up to 4.8%pt. worse) when it did not have access to this information. Similarly, rather intuitively, but less extensively, 
-temperature seems to be an important feature, as he model performed 3.0%pt worse when lacking the temperature information.
+temperature seems to be an important feature, as the model performed 3.0%pt worse when lacking the temperature information.
 
 The model is clearly biased towards predicting "T", reflecting the larger amount of "T" entries in the dataset.
 The nature of a random forest model is that it conglomerates the prediction of multiple decision trees. This makes it difficult towards
