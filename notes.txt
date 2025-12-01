@@ -15,7 +15,7 @@ Configured orange workflow to train and test the three selected model types on t
 and test datasets, and to display results on both the test and validation datasets.
 
 Experimented with variations of hyperparameters for all three chosen model types,
-eventually settling on [TODO model] with [TODO hyperparameters]
+eventually settling on Random Forest with n=25, threshold=5
 
 Section 3:
 - X: Discrete Feature - Used
@@ -46,6 +46,7 @@ As such, this variable was not considered.
 Section 5:
 Model types used: Neural Network, Random forest, Support Vector Machine
 All models were evaluated with 5-fold cross validation
+Hyperparameters were chosen by modifying one parameter at a time from a set that had already been tested, such that a comparisson could be drawn.
 
 Neural network hyperparameter experiments:
 - CA = 0.733 @ [100,] with 500 iterations
@@ -92,23 +93,27 @@ SVM hyperparameter experiments:
 Best performing parameters: C=2.00, e=0.1, iterations=300, g=auto, c=1.0, d=5, for CA = 0.813
 
 
-The best model seems to be Random Forest, with a CA of 0.858 with n=25, threshold=5
+Final model chosen: The best model seems to be Random Forest, with a CA of 0.858 with n=25, threshold=5
 
 
 Section 6:
-Final model chosen: [TODO fill]
-Justification: [TODO fill]
-Confusion matrix on validation dataset: [TODO fill]
+Model choice justification: Random Forest was found to perform best on this problem after manual hyperparameter tuning, 
+                            compared to an SVM or Neural Network. The neural network could not be manually improved above CA = 0.843,
+                            nor could the SVM be manually improved above 0.813. The random forest model performed 1.5%pt. better than
+                            the neural network model, and 4.5%pt. better than the SVM model.
+Confusion matrix on test dataset: 
         Predicted
-        F          T
+        F      T
 A
-c  F
+c  F    35     1
 t
 u
-a  T
+a  T    8      46
 l
 
-Comment: [TODO write]
+Comment: The confusion matrix tells us that the model is quite accurate (CA = 0.900 on test data), and has a low rate of false-positives, 
+         but a higher rate of false-negatives. This suggests that the model is useful and fairly reliable, but that it is advisable to lean on the
+         side of caution when using its predictions.
 
 
 Section 7:
